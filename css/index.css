@@ -1,0 +1,534 @@
+@import url(common.css);
+
+
+html{scroll-behavior: smooth;}
+
+
+/* header_________________________________ */
+
+header{
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 80px;
+  background-color: rgb(63, 80, 238);
+}
+
+nav{
+  /* border: 1px solid #000; */
+  width: 1200px;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.gnb{
+  /* border: 1px solid #000; */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.gnb>.main{
+  /* border: 1px solid #000; */
+  width: 150px;
+}
+.gnb>.main>a{
+  /* border: 1px solid red; */
+  display: block;
+  position: relative;
+  width: inherit;
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  font-size: 15px;
+	font-weight: 600;
+  text-transform: uppercase;
+}
+.gnb>.main>a:after{
+  content: "\f0dd" ;
+  font-family: fontawesome;
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  color: #ffffff;
+}
+.gnb>.main:hover>a{color: orangered;}
+.gnb>.main:hover>a:after{color: orangered;}
+
+.sub{
+  position:absolute;
+  z-index: 100;
+	top:80px; 
+  border-left:solid 1px #ffffff;
+  background: orangered;
+  width:150px;
+  height: 250px;
+}
+.first{border-left: none;}
+.sub li{
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub li a {
+	color: #ffffff;
+	font-size: 14px;
+}
+.sub li:hover{
+  background-color:  rgb(189, 51, 0);
+}
+
+.sub_bgbox{ 
+  display:none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+	width:100%;
+	height:250px; 
+	background: orangered;
+}
+
+.gopizza h3{
+  /* border: 1px solid #000; */
+  background-color: orangered;
+  margin: auto;
+  text-align: center;
+  font-size: 180px;
+  color: #fff;
+}
+
+
+/* main_________________________________ */
+
+
+.fadeShow{
+  position: relative;
+  /* border: 1px solid #000; */
+  margin: 60px auto 10px auto;
+  width: 900px;
+  height: 500px;
+}
+.changeimg ul li{
+  /* border: 1px solid #000; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat:no-repeat;
+  background-size: cover;
+  border-radius: 2000px;
+  display: none;
+}
+
+.changeimg ul li:first-child{display: block;}
+.changeimg ul li:nth-child(1){background-image: url(../image/main1.png);}
+.changeimg ul li:nth-child(2){background-image: url(../image/main2.png);}
+.changeimg ul li:nth-child(3){background-image: url(../image/main3.png);}
+
+/* 하단버튼 */
+.fadeShow .btn{
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn ul{display: flex;}
+.btn ul li{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #000;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.btn ul li.active{background: orangered;}
+
+
+/* Brand_________________________________ */
+
+.brand{
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:100px auto;
+  padding: 200px 0;
+}
+
+.brandin{
+  position: relative;
+
+}
+
+.brandin-text{
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  color: #fff;
+  left: 25%;
+  bottom: 40%;
+  opacity: 30%;
+  transition: 0.5s;
+}
+
+.brd1 .brandin-text{
+  padding: 132px 55px 130px 50px;
+  left: 20px;
+  bottom: 0px;
+  border-radius: 30px;
+  background-color: #00000070;
+}
+
+.brd2 .brandin-text{
+  padding: 159px 75px 160px 75px;
+  left: 20px;
+  bottom: 0px;
+  border-radius: 27px;
+  background-color: #00000070;
+}
+
+.brandin .brandin-text:hover{
+  opacity: 100%;
+  box-shadow: 10px 10px 30px 5px #00000073;
+}
+
+.brand .brd2{
+  font-size: 21px;
+}
+
+.brandin img{
+  /* border: 1px solid #000; */
+  border-radius: 30px;
+  margin: auto 20px;
+}
+
+
+
+
+/* Store_________________________________ */
+
+.store{
+  /* border: 1px solid #000; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 200px 0;
+  flex-direction: column;
+  background-color: orangered;
+  /* color: #fff; */
+}
+
+.store li{
+  border-bottom: 1px solid #000;
+  width: 1200px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.store .title:after{
+  content: '\e0c8';
+  font-family: 'Material Symbols Outlined';
+  float: right;
+  margin-top: 5px;
+  font-size: 35px;
+  font-weight: 350;
+}
+
+.store div :is(input, select){
+  width: 300px;
+  padding: 15px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 15px;
+  margin: 20px 10px 50px 10px;
+}
+
+.store button{
+  width: 80px;
+  border: none;
+  padding: 15px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.store dt{
+  /* border: 1px solid #000; */
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+}
+.store dd{font-size: 18px;}
+.store span{color: royalblue;}
+.store strong{
+  font-weight: normal;
+  color: rgb(170, 0, 0);
+}
+
+.store button:hover{background-color: #555;}
+
+.store .content.active{display: block;} 
+.store .content {display: none;}
+
+/* Menu_________________________________ */
+
+#menu{
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 300px 0;
+}
+
+.menu{
+  /* border: 1px solid #000; */
+  margin-bottom: 100px;
+  padding: 20px;
+  border-radius: 50px;
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(63, 80, 238);
+}
+
+.menuin{ 
+	position:relative;
+	width:1200px;
+	height:400px;
+	margin: auto;
+}
+.menuin .ban{   
+	width:850px;
+	height:400px;
+	overflow:hidden;
+	position: absolute;
+	top: 15px;
+	left: 100px;
+  transform: translate(10%, 0%);
+}
+.menuin .ban ul{
+	display: flex;
+	position:relative;  
+}
+.menuin .ban ul li{
+	width:400px;  
+	height:400px; 
+  margin-right: 50px;
+}
+.ban ul img{border-radius: 50%;}
+
+.ban ul p{
+  width: 400px;
+  height: 250px;
+  padding-top: 150px;
+  font-size: 45px;
+  font-weight: bold;
+  transform: translate( 1%, -100%);
+  color: #fff;
+  text-shadow: 0 0 30px#000;
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+
+.ban ul p:hover{opacity: 100;}
+
+
+/* Event_________________________________ */
+
+#event{
+  /* border: 1px solid #000; */
+  margin:auto;
+  padding-top: 100px;
+}
+
+#event h1{
+  /* border: 1px solid #000; */
+  font-size: 230px;
+  text-align: center;
+  color: orangered;
+  animation: storea 5s linear infinite;
+}
+
+.event{
+  /* border: 1px solid #000; */
+  position: relative;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 55%);
+  margin-bottom: 400px;
+}
+
+.event img{
+  margin-right: 100px;
+  border-radius: 20px;
+}
+
+.event p{
+  /* border: 1px solid #000; */
+  width: 400px;
+  text-align: center;
+  background-color: #00000093;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 20px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.event1 p{
+  /* border: 1px solid #000; */
+  padding: 225px 0 221px 0;
+}
+
+.event2 p{
+  /* border: 1px solid #000; */
+  padding: 251px 0 255px 0;
+}
+
+.event p:hover{opacity: 100;}
+
+@keyframes storea {
+  0%{
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30%);
+  }
+  100%{
+    transform: translatex(30%);
+  }
+}
+
+/* #Inquiry_________________________________ */
+
+#inquiry{
+  /* border: 1px solid #a54242; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+#inquiry h1{
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.inquiry{
+  position: relative;
+  /* border: 1px solid #fff; */
+  width: 1000px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgb(63, 80, 238);
+  color: #fff;
+  box-shadow: 10px 10px 10px 10px #00000073;
+  border-radius: 0 30% 0 0;
+}
+
+.inquiry input{
+  margin-bottom: 25px;
+}
+
+
+.inquiry label.name:before{content: "이름";}
+.inquiry label.tel:before{content: "연락처";}
+.inquiry label.emali:before{content: "이메일";}
+.inquiry label.date:before{content: "배송희망날짜";}
+.inquiry label.joso:before{content: "상세주소";}
+.inquiry label.text:before{content: "문의내용";}
+
+.inquiry div :is(input,select){
+  width: 300px;
+  padding: 15px;
+  /* border: 1px solid #fff; */
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 20px;
+  margin: 20px 10px 50px 10px;
+  background-color: rgb(63, 80, 238);
+
+}
+
+.inquiry div textarea{
+  height: 500px;
+  width: 1000px;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgb(63, 80, 238);
+  border: 2px solid #777;
+}
+
+.inquiry button{
+  width: 80px;
+  border: none;
+  padding: 18px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  
+}
+
+.inquiry button:hover{background-color: #555;}
+
+.inquiry .button button{
+  width: 300px;
+  border: none;
+  padding: 20px;
+  background-color: orangered;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 30px;
+  border-radius: 30px;
+  font-size: 25px;
+  position: relative;
+  top: 30px;
+  left: 500px; 
+  transform: translate(-50%, -50%);
+}
+
+.inquiry .button button:hover{background-color:  rgb(189, 51, 0);
+}
+/* footer_________________________________ */
+
+footer{
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 200px;
+  background-color: gray;
+  color: #fff;
+}
+
+footer div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.sns{
+  font-size: 40px;
+  margin: 10px;
+}
+
+.sns a{margin-left: 10px;}
+
+.sns a:hover{color: orangered;}
